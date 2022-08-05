@@ -36,4 +36,26 @@ public class EmployeeServiceImpl implements EmployeeServiceI{
 		return less;
 	}
 
+	@Override
+	public void updateAll(List<EmployeeEntity> emp) {
+		List<EmployeeEntity> saveAll = employeeRepository.saveAll(emp);
+		
+	}
+
+	@Override
+	public EmployeeEntity update(EmployeeEntity emp) {
+		EmployeeEntity updateid= employeeRepository.save(emp);
+		return updateid;
+	}
+
+	@Override
+	public List<EmployeeEntity> getAllEmp() {
+		List<EmployeeEntity> getall = employeeRepository.findAll();
+		return  getall;
+	}
+
+	
+
+
+
 }

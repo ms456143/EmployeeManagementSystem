@@ -13,4 +13,16 @@ public interface EmployeeServiceI {
 	public void deleteAll();
 	
 	public List<EmployeeEntity> ageLess(Integer age);
+	
+	
+	
+	public void updateAll (List<EmployeeEntity>emp);
+	
+	
+	public EmployeeEntity update (EmployeeEntity emp);
+	
+	public List <EmployeeEntity>getAllEmp();
+
+	
+	
 }

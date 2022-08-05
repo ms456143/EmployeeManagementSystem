@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.Tcs.Ems.Model.EmployeeEntity;
@@ -44,4 +45,30 @@ public class EmployeeController {
 		List<EmployeeEntity> ageLess = employeeServiceI.ageLess(age);
 		return new ResponseEntity<>(ageLess,HttpStatus.OK);
 	}
+	
+	
+//***********************************************************************************************
+	
+@PostMapping(value="/GetAllData",consumes="application/json")
+	public ResponseEntity<List<EmployeeEntity>>getAllData(){
+		
+		List<EmployeeEntity> allEmp = employeeServiceI.getAllEmp();
+		return new ResponseEntity<List<EmployeeEntity>>(allEmp,HttpStatus.OK);
+		
+	}
+@GetMapping(value="/UpdateByID/{empid}",produces="application/json",consumes="application/json")
+public ResponseEntity<EmployeeEntity>updateByid(@RequestBody EmployeeEntity emp){
+	
+	EmployeeEntity update = employeeServiceI.update(emp);
+	
+	return new ResponseEntity<EmployeeEntity>(update,HttpStatus.OK);
+}
+	@GetMapping(value="/UpdateAll",consumes="application/json",produces="application/json")
+public ResponseEntity<String>UpdateAlldata (@RequestBody List<EmployeeEntity> emp){
+	employeeServiceI.updateAll(emp);
+	String msg="Data update Sucessfully";
+	return new ResponseEntity<String>(msg,HttpStatus.OK);
+//*************************************************************************************************************	
+	
+}
 }

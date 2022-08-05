@@ -16,6 +16,8 @@ public class EmployeeEntity {
 	private String empEmail;
 	private double empSalary;
 	private Integer empAge;
+	
+	
 	public Integer getEmpId() {
 		return empId;
 	}
