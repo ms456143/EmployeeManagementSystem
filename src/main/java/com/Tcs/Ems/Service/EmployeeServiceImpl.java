@@ -1,5 +1,7 @@
 package com.Tcs.Ems.Service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +18,22 @@ public class EmployeeServiceImpl implements EmployeeServiceI{
 	public EmployeeEntity login(String name, String email) {
 		EmployeeEntity log = employeeRepository.findByEmpNameAndEmpEmail(name, email);
 		return log;
+	}
+
+	@Override
+	public void delete(Integer eid) {
+		employeeRepository.deleteById(eid);
+	}
+
+	@Override
+	public void deleteAll() {
+		employeeRepository.deleteAll();
+	}
+
+	@Override
+	public List<EmployeeEntity> ageLess(Integer age) {
+		List<EmployeeEntity> less = employeeRepository.findByEmpAgeLessThan(age);
+		return less;
 	}
 
 }
