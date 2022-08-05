@@ -65,6 +65,24 @@ public class EmployeeServiceImpl implements EmployeeServiceI{
 		return  getall;
 	}
 
+	@Override
+	public void delete(Integer eid) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void deleteAll() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public List<EmployeeEntity> ageLess(Integer age) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 	
 
 

@@ -23,7 +23,7 @@ public interface EmployeeServiceI {
 	public List<EmployeeEntity> ageLess(Integer age);
 	
 	
-<<<<<<< HEAD
+
 	
 	public void updateAll (List<EmployeeEntity>emp);
 	
@@ -34,7 +34,7 @@ public interface EmployeeServiceI {
 
 	
 	
-=======
 
->>>>>>> 184a72e7b49e7988c64bab3ca44764d25a500b51
+
+
 }

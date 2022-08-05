@@ -13,11 +13,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-<<<<<<< HEAD
+
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-=======
->>>>>>> 184a72e7b49e7988c64bab3ca44764d25a500b51
+
 
 import org.springframework.web.bind.annotation.RequestBody;
 
@@ -59,7 +58,7 @@ public class EmployeeController {
 		return new ResponseEntity<>(ageLess,HttpStatus.OK);
 	}
 	
-<<<<<<< HEAD
+
 	
 //***********************************************************************************************
 	
@@ -85,7 +84,7 @@ public ResponseEntity<String>UpdateAlldata (@RequestBody List<EmployeeEntity> em
 //*************************************************************************************************************	
 	
 }
-=======
+
 	@Autowired
 	private EmployeeServiceImpl employeeServiceImpl;
 
@@ -138,5 +137,5 @@ public ResponseEntity<String>UpdateAlldata (@RequestBody List<EmployeeEntity> em
 	
 	
 	
->>>>>>> 184a72e7b49e7988c64bab3ca44764d25a500b51
+
 }
