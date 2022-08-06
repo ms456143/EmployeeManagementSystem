@@ -67,20 +67,18 @@ public class EmployeeServiceImpl implements EmployeeServiceI{
 
 	@Override
 	public void delete(Integer eid) {
-		// TODO Auto-generated method stub
-		
+		employeeRepository.deleteById(eid);
 	}
 
 	@Override
 	public void deleteAll() {
-		// TODO Auto-generated method stub
-		
+		employeeRepository.deleteAll();
 	}
 
 	@Override
 	public List<EmployeeEntity> ageLess(Integer age) {
-		// TODO Auto-generated method stub
-		return null;
+		List<EmployeeEntity> findByEmpAgeLessThan = employeeRepository.findByEmpAgeLessThan(age);
+		return findByEmpAgeLessThan;
 	}
 
 	
